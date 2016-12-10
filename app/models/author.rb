@@ -1,5 +1,7 @@
 class Author < ApplicationRecord
 
-validates :name, presence: true, uniqueness: { case_sensitive: false }
+  has_many :quotes, dependent: :destroy
+
+  validates :name, presence: true, uniqueness: { case_sensitive: false }
 
 end
