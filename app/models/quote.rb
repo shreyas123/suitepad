@@ -7,6 +7,8 @@ class Quote < ApplicationRecord
 
   scope :random, -> { self.offset(rand(self.count)).first }
 
+  delegate :name, to: :author, prefix: true
+
   def genre_type
     genre.try(:genre_type) || 'nature'
   end

@@ -36,4 +36,8 @@ RSpec.describe Quote, type: :model do
       it { is_expected.to eql 'nature' }
     end
   end
+
+  describe 'delegates' do
+    it { is_expected.to delegate_method(:name).to(:author).with_prefix(true) }
+  end
 end
