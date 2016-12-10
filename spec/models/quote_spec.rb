@@ -20,4 +20,20 @@ RSpec.describe Quote, type: :model do
       end
     end
   end
+
+  describe '#genre_type' do
+    let(:genre) { create :genre, genre_type: 'happy' }
+    let(:quote) { create :quote, genre: genre }
+
+    subject { quote.genre_type }
+
+    context 'when genre exists' do
+      it { is_expected.to eql 'happy' }
+    end
+    context 'when genre does not exists' do
+      let(:genre) { nil }
+
+      it { is_expected.to eql 'nature' }
+    end
+  end
 end

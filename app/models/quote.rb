@@ -6,4 +6,8 @@ class Quote < ApplicationRecord
   validates :author, presence: true
 
   scope :random, -> { self.offset(rand(self.count)).first }
+
+  def genre_type
+    genre.try(:genre_type) || 'nature'
+  end
 end
