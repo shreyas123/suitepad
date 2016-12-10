@@ -23,9 +23,11 @@ ActiveRecord::Schema.define(version: 20161210185316) do
   create_table "quotes", force: :cascade do |t|
     t.string   "quote"
     t.integer  "author_id"
+    t.integer  "genre_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["author_id"], name: "index_quotes_on_author_id"
+    t.index ["genre_id"], name: "index_quotes_on_genre_id"
   end
 
 end
