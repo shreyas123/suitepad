@@ -1,0 +1,31 @@
+// Place all the styles related to the quotes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.complete-page {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  color: white;
+  display: table;
+  text-decoration: bold;
+  #quote {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    font-size: 20px;
+    display: table-cell;
+    vertical-align: middle;
+  }
+  #author {
+    font-size: 14px;
+    font-style: italic;
+  }
+}
