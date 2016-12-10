@@ -4,4 +4,6 @@ class Quote < ApplicationRecord
 
   validates :quote, presence: true
   validates :author, presence: true
+
+  scope :random, -> { self.offset(rand(self.count)).first }
 end

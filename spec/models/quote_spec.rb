@@ -10,4 +10,14 @@ RSpec.describe Quote, type: :model do
     it { is_expected.to validate_presence_of(:quote) }
     it { is_expected.to validate_presence_of(:author) }
   end
+
+  describe 'scopes' do
+    describe '.random' do
+      let!(:quote) { create :quote, quote: 'Shreyas' }
+
+      it 'returns any one random quote' do
+        expect(described_class.random).to eql quote
+      end
+    end
+  end
 end
