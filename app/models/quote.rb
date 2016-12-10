@@ -12,4 +12,9 @@ class Quote < ApplicationRecord
   def genre_type
     genre.try(:genre_type) || 'nature'
   end
+
+  def as_json(options = {})
+    default_options = { only: [:quote], methods: [:genre_type, :author_name] }
+    super(options.merge(default_options))
+  end
 end

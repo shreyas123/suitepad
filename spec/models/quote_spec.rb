@@ -40,4 +40,14 @@ RSpec.describe Quote, type: :model do
   describe 'delegates' do
     it { is_expected.to delegate_method(:name).to(:author).with_prefix(true) }
   end
+
+  describe '#as_json' do
+    let(:genre) { create :genre, genre_type: 'happy' }
+    let(:author) { create :author, name: 'Brad Pitt' }
+    let!(:quote) { create :quote, genre: genre, quote: 'Angelina is great', author: author }
+
+    it 'returns json with author name and genre_type' do
+      expect(quote.as_json).to eql({ "quote" => 'Angelina is great', "author_name" => 'Brad Pitt', "genre_type" => 'happy' })
+    end
+  end
 end
