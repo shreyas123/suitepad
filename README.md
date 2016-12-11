@@ -1,13 +1,15 @@
 # README
 
-A simple application which updates the page every 10 mins with a quote and a different background image. [![Build Status](https://travis-ci.org/shreyas123/suitepad.svg?branch=master)](https://travis-ci.org/shreyas123/suitepad)
+A simple application which updates the page every 10 mins with a quote and a different background image. 
+[![Build Status](https://travis-ci.org/shreyas123/suitepad.svg?branch=master)](https://travis-ci.org/shreyas123/suitepad)
+
+You can check the live verion of the app at https://suitepadquote.herokuapp.com
 
 ### Ruby version
 `2.3.1` Anything from 2.3.0 and above
 
 ### Database creation
-`rake db:create`
-`rake db:migrate`
+`rake db:create db:migrate`
 
 ### Database initialization
 `rake db:seed`
