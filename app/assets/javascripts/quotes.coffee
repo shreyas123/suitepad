@@ -31,8 +31,8 @@ Quotes =
     @_updateQuoteAndAuthor(jsonResponse['quote'], jsonResponse['author_name'])
 
   _updateQuoteAndAuthor: (quote, author_name) ->
-    quoteSpan = document.getElementById('quote')
-    quoteSpan.innerHTML = "#{quote} <span id='author'>- #{author_name}</span>"
+    document.getElementById('quote').innerHTML = quote
+    document.getElementById('quote').innerHTML = "- #{author_name}"
 
   _updateImage: (genreType) ->
     imageDiv = document.getElementById('back-image')
