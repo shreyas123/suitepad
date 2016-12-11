@@ -32,7 +32,7 @@ Quotes =
 
   _updateQuoteAndAuthor: (quote, author_name) ->
     document.getElementById('quote').innerHTML = quote
-    document.getElementById('quote').innerHTML = "- #{author_name}"
+    document.getElementById('author').innerHTML = "- #{author_name}"
 
   _updateImage: (genreType) ->
     imageDiv = document.getElementById('back-image')
